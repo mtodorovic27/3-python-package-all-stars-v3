@@ -132,7 +132,7 @@ class Tests:
         # there should be no empty strings
         assert roast_template != ""
         # same order of inputs should yield identical strings
-        assert roast_template.format(*["apple", "orange", "banana"]) != roast_template.format(*["apple", "orange", "banana"])
+        assert roast_template.format(*["apple", "orange", "banana"]) == roast_template.format(*["apple", "orange", "banana"])
         # different order of inputs should yield different strings
         assert roast_template.format(*["apple", "orange", "banana"]) != roast_template.format(*["banana", "apple", "orange"])
 
